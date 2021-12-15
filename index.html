@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularz zgłoszeniowy kontrahenta</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="contractor">
+      <h2 class="contractor__title">Nowy kontrahent</h2>
+      <form class="contractor__form" action="">
+        <h3 class="contractor__formTitle">
+          Wypełnij formularz i wyślij zgłoszenie
+        </h3>
+
+        <div class="contractor__inputsContainer">
+          <div class="contractor__inputContainer">
+            <input type="text" id="name" placeholder="Imię" />
+            <label id="name-label" for="name">Imię</label>
+          </div>
+          <div class="contractor__inputContainer">
+            <input type="text" id="surname" placeholder="nazwisko" />
+            <label id="surname-label" for="surname">Nazwisko</label>
+          </div>
+
+          <div class="contractor__selectContainer">
+            <select name="type" id="type">
+              <option value="person">Osoba fizyczna</option>
+              <option value="company">Firma</option>
+            </select>
+            <label for="type">Wybierz typ kontrahenta</label>
+          </div>
+          <div class="contractor__inputContainer">
+            <input type="text" id="id" placeholder="wpisz numer PESEL" />
+            <label for="id">Numer Identyfikacyjny</label>
+          </div>
+        </div>
+        <div class="contractor__inputsContainer">
+          <div class="contractor__inputContainer">
+            <div class="contractor__fileContainer">
+              <label for="image_input">Wybierz zdjęcie:</label>
+              <input
+                class="contractor__file"
+                type="file"
+                id="image_input"
+                accept="image/jpg, image/jpeg"
+              />
+            </div>
+          </div>
+          <div class="contractor__imgContainer">
+            <img class="contractor__img" src="./assets/avatar.png" alt="" />
+          </div>
+        </div>
+        <div class="contractor__submitContainer">
+          <input type="submit" value="Wyślij zgłoszenie" id="submitBtn" />
+        </div>
+      </form>
+    </div>
+    <div class="contractor__overlay">
+      <p>Numer identyfikacyjny nieprawidłowy!</p>
+      <button>Spróbuj jeszcze raz</button>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
